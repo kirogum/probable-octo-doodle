@@ -24,3 +24,4 @@ codeql database create \
 --source-root /fantastic-bassoon/jquery-ajax-example-code \
 /test/
 ```
+Deleted alerts, can you find them again?
