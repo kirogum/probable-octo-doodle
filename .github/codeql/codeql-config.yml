@@ -1,0 +1,2 @@
+queries:
+  - uses: ./custom-queries/modified-xss.ql
