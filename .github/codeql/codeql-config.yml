@@ -1,2 +1,2 @@
 queries:
-  - uses: ./custom-queries/modified-xss.ql
+  - uses: ./.github/codeql/custom-queries/modified-xss.ql
