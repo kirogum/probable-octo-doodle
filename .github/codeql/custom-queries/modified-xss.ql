@@ -1,9 +1,12 @@
 /**
  * @name Modified XSS
+ * @id js/modified-xss
  * @description Reinterpreting text from the DOM as HTML
  *              can lead to a cross-site scripting vulnerability.
  * @kind path-problem
- * @problem.severity warning
+ * @problem.severity error
+ * @precision high
+ * @tags security
  */
 
 import javascript
