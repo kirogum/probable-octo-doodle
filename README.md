@@ -24,6 +24,3 @@ codeql database create \
 --source-root /fantastic-bassoon/jquery-ajax-example-code \
 /test/
 ```
-
-
-Gattaca
