@@ -9,7 +9,7 @@ The purpose of this small project is to build a query for a customer in which de
  - Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
    - Or update if already installed: `brew update`
  - Install php: `brew install php`
-- Change directory to `fantastic-bassoon/jquery-ajax-example-code/`
+- Clone and cd `the name of this repo`
 - Run `php -S localhost:8000 (or whatever port)`
   - Run `kill -9 $(lsof -t -i:<your-fav-port>)` if desired port was previously allocated. 
 - Test the simple HTML elements.
@@ -24,4 +24,3 @@ codeql database create \
 --source-root /fantastic-bassoon/jquery-ajax-example-code \
 /test/
 ```
-Deleted alerts, can you find them again?
