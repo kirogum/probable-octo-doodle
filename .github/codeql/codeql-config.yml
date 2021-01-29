@@ -1,2 +1,3 @@
 queries:
   - uses: ./.github/codeql/custom-queries/modified-xss.ql
+  - uses: security-and-quality
