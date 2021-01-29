@@ -1,3 +1,13 @@
+name: "Custom Config"
+
+disable-default-queries: false
+
 queries:
   - uses: ./.github/codeql/custom-queries/modified-xss.ql
   - uses: security-and-quality
+
+# paths:
+#   - src 
+# paths-ignore: 
+#   - src/node_modules
+#   - '**/*.test.js'
