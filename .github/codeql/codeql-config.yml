@@ -4,7 +4,7 @@ disable-default-queries: false
 
 queries:
   - name: javascript-custom-queries
-    uses: kirogum/central-queries/javascript/custom-queries@main
+    uses: kirogum/central-queries@main
   - uses: security-and-quality
 #  - uses: ./.github/codeql/custom-queries/modified-xss.ql
 
