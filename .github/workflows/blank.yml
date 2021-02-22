@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - id: foo
-      uses: kirogum/solid-couscous@v1
+      uses: kirogum/solid-couscous@v2
       with:
         who-to-greet: 'Mona the Octocat'
     - run: echo random-number ${{ steps.foo.outputs.random-number }}
