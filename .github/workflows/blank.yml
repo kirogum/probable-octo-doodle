@@ -4,7 +4,7 @@ name: CI
 
 # Controls when the action will run. 
 on:
-  workflow_dispatch
+  push:
 
 jobs:
   hello_world_job:
