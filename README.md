@@ -25,3 +25,4 @@ codeql database create \
 /test/
 ```
 test
+test
