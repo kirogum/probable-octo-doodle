@@ -3,6 +3,9 @@ name: "CodeQL path1"
 on:
   push:
     branches: [main]
+    paths:
+      - '**/codeql-config-path1.yml'
+      - 'path1/**'
   pull_request:
     branches: [main]
   schedule:
