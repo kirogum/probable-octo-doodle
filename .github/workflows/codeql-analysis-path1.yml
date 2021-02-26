@@ -43,6 +43,11 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
+      
+    - name: Change directory
+      run: |
+        cd ~
+        pwd
 
     - uses: jakejarvis/s3-sync-action@master
       with:
