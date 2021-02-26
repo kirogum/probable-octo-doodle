@@ -56,7 +56,7 @@ jobs:
           rm -rf $DATABASE_DIR/$SUB_DIR
         done
         echo "Zipping database"
-        DATABASE_ZIP="example-$LANGUAGE-db.zip"
+        DATABASE_ZIP="example2-$LANGUAGE-db.zip"
         zip -r "$DATABASE_ZIP" "$DATABASE_DIR"
         echo "::set-output name=zip::$DATABASE_ZIP"
 
