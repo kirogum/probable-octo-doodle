@@ -43,12 +43,20 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
-        
+    
+    - name: Copy contents to repository
+      run: |
+        cp -R /home/runner/work/_temp/codeql_databases/javascript ${{ github.workspace }}/codeql_datbases
+        cd ${{ github.workspace }}
+        ls -la
+        cd codeql_data
+        ls -la
+
     - uses: tpaschalis/s3-sync-action@master
       with:
        args: --acl public-read
       env:
-         FILE: /home/runner/work/_temp/codeql_databases/javascript
+         FILE: codeql_datbases
          AWS_REGION: 'eu-central-1'
          AWS_S3_BUCKET: ${{ secrets.AWS_BUCKET }}
          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
