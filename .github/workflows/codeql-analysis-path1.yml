@@ -59,16 +59,13 @@ jobs:
         DATABASE_ZIP="example-$LANGUAGE-db.zip"
         zip -r "$DATABASE_ZIP" "$DATABASE_DIR"
         echo "::set-output name=zip::$DATABASE_ZIP"
-        
-        ls -l
-        pwd
 
     - uses: tpaschalis/s3-sync-action@master
       with:
        args: --acl public-read
       env:
-         FILE: ${{ github.repository }}-${{ matrix.language }}-db.zip
-         AWS_REGION: 'eu-central-1'
+         FILE: example-${{ matrix.language }}-db.zip
+         AWS_REGION: 'us-east-2'
          AWS_S3_BUCKET: ${{ secrets.AWS_BUCKET }}
          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
