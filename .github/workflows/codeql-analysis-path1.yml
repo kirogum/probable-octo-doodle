@@ -60,7 +60,7 @@ jobs:
         zip -r "$DATABASE_ZIP" "$DATABASE_DIR"
         echo "::set-output name=zip::$DATABASE_ZIP"
         
-        cd ls -l
+        ls -l
         pwd
 
     - uses: tpaschalis/s3-sync-action@master
