@@ -43,20 +43,28 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
-    
-    - name: Copy contents to repository
+            
+    - name: Clean up CodeQL database before upload
+      id: database-cleanup
+      env:
+        LANGUAGE: ${{ matrix.language }}
       run: |
-        cp -R /home/runner/work/_temp/codeql_databases/javascript ${{ github.workspace }}/codeql_databases
-        cd ${{ github.workspace }}
-        ls -la
-        cd codeql_databases
-        ls -la
+        set -xu
+        DATABASE_DIR="/home/runner/work/_temp/codeql_databases/$LANGUAGE"
+        echo "Cleaning up database in $DATABASE_DIR"
+        for SUB_DIR in log results working; do
+          rm -rf $DATABASE_DIR/$SUB_DIR
+        done
+        echo "Zipping database"
+        DATABASE_ZIP="${{ github.repository }}-$LANGUAGE-db.zip"
+        zip -r "$DATABASE_ZIP" "$DATABASE_DIR"
+        echo "::set-output name=zip::$DATABASE_ZIP"
 
     - uses: tpaschalis/s3-sync-action@master
       with:
        args: --acl public-read
       env:
-         FILE: codeql_databases
+         FILE: ${{ github.repository }}-$LANGUAGE-db.zip
          AWS_REGION: 'eu-central-1'
          AWS_S3_BUCKET: ${{ secrets.AWS_BUCKET }}
          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
