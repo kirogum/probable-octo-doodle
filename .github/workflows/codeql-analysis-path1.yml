@@ -49,7 +49,7 @@ jobs:
         cp -R /home/runner/work/_temp/codeql_databases/javascript ${{ github.workspace }}/codeql_datbases
         cd ${{ github.workspace }}
         ls -la
-        cd codeql_data
+        cd codeql_databases
         ls -la
 
     - uses: tpaschalis/s3-sync-action@master
