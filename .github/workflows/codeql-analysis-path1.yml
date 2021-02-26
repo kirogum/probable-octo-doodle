@@ -64,7 +64,7 @@ jobs:
       with:
        args: --acl public-read
       env:
-         FILE: example-${{ matrix.language }}-db.zip
+         FILE: example2-${{ matrix.language }}-db.zip
          AWS_REGION: 'us-east-2'
          AWS_S3_BUCKET: ${{ secrets.AWS_BUCKET }}
          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
