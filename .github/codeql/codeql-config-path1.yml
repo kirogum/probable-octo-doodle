@@ -1,12 +1,12 @@
 name: "Custom Config path1"
 
-disable-default-queries: false
+disable-default-queries: true
 
-# queries:
+queries:
 #   - name: javascript-custom-queries
 #     uses: kirogum/central-queries/javascript/custom-queries/modified-xss.ql@main
-#   - uses: security-and-quality
-#  - uses: ./.github/codeql/custom-queries/modified-xss.ql
+  - uses: security-and-quality
+#   - uses: ./.github/codeql/custom-queries/modified-xss.ql
 
 paths:
   - 'path1/**'
