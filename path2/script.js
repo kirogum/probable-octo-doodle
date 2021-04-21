@@ -6,8 +6,8 @@ $(document).ready(function() {
       
 	// Need to alert - Security/CWE-079/XssThroughDom.ql
 	var text = document.getElementById("user-text").value;
-    document.getElementById("user-input-results").innerHTML = text;
-      
+    	document.getElementById("user-input-results").innerHTML = text;
+     	document.getElementById("user-input-results").innerHTML = text;
 	$.ajax({
 		type: 'GET',
 		url: 'php/search.php',
