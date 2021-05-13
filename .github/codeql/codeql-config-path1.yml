@@ -11,4 +11,4 @@ queries:
 # paths:
 #   - 'path1/**'
 paths-ignore: 
-  - '**'
+  - '/**/'
