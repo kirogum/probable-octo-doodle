@@ -1,4 +1,6 @@
 # Testing Code Scanning and Secret Scanning
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkirogum%2Fprobable-octo-doodle.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkirogum%2Fprobable-octo-doodle?ref=badge_shield)
+
 A repository to test GHAS features
 
 ## Existing Code Databases
@@ -24,3 +26,7 @@ codeql database create \
 --source-root /fantastic-bassoon/jquery-ajax-example-code \
 /test/
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkirogum%2Fprobable-octo-doodle.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkirogum%2Fprobable-octo-doodle?ref=badge_large)
