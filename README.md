@@ -12,7 +12,7 @@ The purpose of this small project is to build a query for a customer in which de
 - Clone and cd `the name of this repo`
 - Run `php -S localhost:8000 (or whatever port)`
   - Run `kill -9 $(lsof -t -i:<your-fav-port>)` if desired port was previously allocated. 
-- Test the simple HTML elements.
+- Test the simple HTML elements.     
 
 ## Querying Code Databases
 Ceate your own db via the codeql-cli. Here's a [resource](https://github.com/github/vscode-codeql-starter/) for further instructions.
