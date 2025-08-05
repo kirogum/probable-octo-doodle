@@ -1,5 +1,5 @@
 # Testing Code Scanning and Secret Scanning
-A repository to test GHAS features
+A repository to test GHAS features    
 
 ## Existing Code Databases
 ### jQuery Ajax Issue
